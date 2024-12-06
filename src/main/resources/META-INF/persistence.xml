@@ -1,0 +1,27 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_1.xsd"
+             version="3.1">
+    <persistence-unit name="Catalogo Bibliografico 2">
+        <class>org.example.elementi_catalogo.Libro</class>
+        <class>org.example.elementi_catalogo.Rivista</class>
+        <class>org.example.gestione.GestionePrestito</class>
+        <class>org.example.gestione.GestioneElemento</class>
+        <class>org.example.Archivio</class>
+        <class>org.example.Elemento</class>
+        <class>org.example.Prestito</class>
+        <class>org.example.Utente</class>
+
+
+        <properties>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/Catalogo_Bibliografico_2"/>
+            <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+            <property name="jakarta.persistence.jdbc.password" value="fricchio29"/>
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
